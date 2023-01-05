@@ -63,9 +63,9 @@ st.write('Online sales contribution:', online_sales_contribution)
 st.write('Private label contribution:', private_label_contribution)
 
 # create combo chart with revenue and basket size value
-fig = px.line(category_df, x='Year', y='Revenue', title='Revenue and Basket Size Value')
-fig.add_scatter(x=category_df['Year'], y=category_df['Revenue'] / category_df['Number of Transactions'], mode='lines', name='Basket Size Value')
-st.plotly_chart(fig)
+#fig = px.line(category_df, x='Year', y='Revenue', title='Revenue and Basket Size Value')
+#fig.add_scatter(x=category_df['Year'], y=category_df['Revenue'] / category_df['Number of Transactions'], mode='lines', name='Basket Size Value')
+#st.plotly_chart(fig)
 # create wrapper function to run dashboard in Streamlit
 #def main(df):
    # create_dashboard(df)
