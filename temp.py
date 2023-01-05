@@ -69,3 +69,4 @@ def create_dashboard(df):
     # create wrapper function to run dashboard in Streamlit
     def main(df):
         create_dashboard(df)
+create_dashboard(df)
