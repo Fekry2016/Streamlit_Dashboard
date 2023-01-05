@@ -67,6 +67,6 @@ def create_dashboard(df):
     fig.add_scatter(x=category_df['Year'], y=category_df['Revenue'] / category_df['Number of Transactions'], mode='lines', name='Basket Size Value')
     st.plotly_chart(fig)
     # create wrapper function to run dashboard in Streamlit
-    def main(df):
-        create_dashboard(df)
+    #def main(df):
+        #create_dashboard(df)
 create_dashboard(df)
