@@ -1,6 +1,6 @@
+%conda to install openpyxl
 import pandas as pd
-df=pd.read_excel("case.xlsx",parse_dates=True)
-df['Year']=df['Month Name'].dt.year
+
 #print(df)
 # import necessary libraries
 import plotly.express as px
@@ -9,9 +9,11 @@ import streamlit as st
 st.set_page_config(page_title="Sales Dashboard",
                    page_icon=":bar_chart:",
                    layout="wide")
-st.dataframe(df)
 st.header('Sales Dashboard')
 st.markdown('<style>body {text-align: center;}</style>', unsafe_allow_html=True)
+df=pd.read_excel("case.xlsx",parse_dates=True)
+df['Year']=df['Month Name'].dt.year
+st.dataframe(df)
 
 # define dashboard function
 def create_dashboard(df):
