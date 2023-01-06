@@ -1,3 +1,6 @@
 import pandas as pd 
-df=pd.read_excel('Case.xlsx')
+df=pd.read_excel('case.xlsx')
+print(df)
+import pandas as pd 
+df= pd.read_excel('Case. xlsx')
 print(df)
