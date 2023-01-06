@@ -1,4 +1,4 @@
-conda install openpyxl
+$conda install openpyxl
 import pandas as pd
 
 #print(df)
