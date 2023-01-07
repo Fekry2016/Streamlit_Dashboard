@@ -5,6 +5,7 @@ import plotly.express as px
 
 # load data into dataframe
 df = pd.read_excel('case.xlsx')
+df=df.fillna(10000)
 
 # create dashboard function
 def create_dashboard(df):
