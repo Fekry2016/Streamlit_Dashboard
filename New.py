@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 
 # load data into dataframe
-df = pd.read_csv('data.csv')
+df = pd.read_excel('case.xlsx')
 
 # create dashboard function
 def create_dashboard(df):
