@@ -31,15 +31,15 @@ def create_dashboard(df):
     basket_size_value_trend = basket_size_value.pct_change() * 100
     
     # display dashboard elements
-    st.write('Total revenue:', revenue)
-    st.write('Revenue growth YoY:', revenue_growth_yoy)
-    st.write('Revenue variance YoY:', revenue_variance_yoy)
-    st.write('Basket size value:', basket_size_value)
-    st.write('Basket size value trend:', basket_size_value_trend)
+    st.write('Total revenue:', round(revenue))
+    st.write('Revenue growth YoY:', round(revenue_growth_yoy))
+    st.write('Revenue variance YoY:', round(revenue_variance_yoy))
+    st.write('Basket size value:', round(basket_size_value))
+    st.write('Basket size value trend:', round(basket_size_value_trend))
     
     # create line chart with revenue, revenue growth YoY, and revenue variance YoY
     fig = px.line(filtered_df, x='Year', y='Revenue', title='Revenue and Variance')
-    fig.add_scatter(x=filtered_df['Year'], y=revenue_growth_yoy, mode='lines', name='Revenue Growth YoY')
-    fig.add_scatter(x=filtered_df['Year'], y=revenue_variance_yoy, mode='lines', name='Revenue Variance YoY')
+    fig.add_scatter(x=filtered_df['Year'], y=round(revenue_growth_yoy), mode='lines', name='Revenue Growth YoY')
+    fig.add_scatter(x=filtered_df['Year'], y=round(revenue_variance_yoy), mode='lines', name='Revenue Variance YoY')
     st.plotly_chart(fig)
 create_dashboard(df)
