@@ -4,7 +4,8 @@ import pandas as pd
 import plotly.express as px
 
 # load data into dataframe
-df = pd.read_excel('case.xlsx')
+df = pd.read_excel('case.xlsx', parse_dates=True)
+df['Year']=df['Month Name'].dt.year
 df=df.fillna(10000)
 
 # create dashboard function
