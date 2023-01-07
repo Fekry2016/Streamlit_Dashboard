@@ -41,10 +41,10 @@ def create_dashboard(df):
     fig.add_scatter(x=filtered_df['Year'], y=revenue_growth_yoy, mode='lines', name='Revenue Growth YoY')
     fig.add_scatter(x=filtered_df['Year'], y=revenue_variance_yoy, mode='lines', name='Revenue Variance YoY')
     st.plotly_chart(fig)
-
+create_dashboard(df)
 # create wrapper function to run dashboard in Streamlit
-def main(df):
-    st.beta_container(lambda: create_dashboard(df))
+#def main(df):
+    #st.beta_container(lambda: create_dashboard(df))
 
-if __name__ == '__main__':
-    main(df)
+#if __name__ == '__main__':
+    #main(df)
